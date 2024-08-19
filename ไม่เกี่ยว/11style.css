@@ -1,0 +1,180 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+aside {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+}
+
+aside .Links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside .Links li {
+  padding: 15px;
+  cursor: pointer;
+}
+
+aside .Links li.activeLink {
+  background-color: #555;
+}
+
+aside .Links i {
+  margin-right: 10px;
+}
+
+/* Swiper container */
+.swiper {
+  position: relative;
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  height: 100vh;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+/* Home slide specific styles */
+.home-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.HomeContent {
+  padding: 20px;
+  text-align: left;
+}
+
+.SideImg {
+  position: relative;
+}
+
+.SideImg img {
+  max-width: 100%;
+  height: auto;
+}
+
+.buttonGroup {
+  margin-top: 20px;
+}
+
+.buttonGroup button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* About Us slide specific styles */
+.about-us {
+  padding: 20px;
+}
+
+.about-me-table ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-me-table li {
+  margin-bottom: 10px;
+}
+
+.skill-bar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-bar li {
+  margin-bottom: 10px;
+}
+
+.bar {
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.active-bar {
+  background-color: #007bff;
+  height: 100%;
+}
+
+/* Services slide specific styles */
+.services {
+  padding: 20px;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  margin-right: 15px;
+}
+
+/* Gallery slide specific styles */
+.gallery {
+  padding: 20px;
+}
+
+.gallery-item {
+  margin-bottom: 10px;
+}
+
+/* Contact Me slide specific styles */
+.contact-me {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Swiper pagination and navigation styles */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: #007bff;
+}

@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 20 14.3% 4.1%;
+--card: 0 0% 100%;
+--card-foreground: 20 14.3% 4.1%;
+--popover: 0 0% 100%;
+--popover-foreground: 20 14.3% 4.1%;
+--primary: 24 9.8% 10%;
+--primary-foreground: 60 9.1% 97.8%;
+--secondary: 60 4.8% 95.9%;
+--secondary-foreground: 24 9.8% 10%;
+--muted: 60 4.8% 95.9%;
+--muted-foreground: 25 5.3% 44.7%;
+--accent: 60 4.8% 95.9%;
+--accent-foreground: 24 9.8% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 60 9.1% 97.8%;
+--border: 20 5.9% 90%;
+--input: 20 5.9% 90%;
+--ring: 20 14.3% 4.1%;
+--radius: 0.95rem;
+				}
+				.dark {
+					--background: 20 14.3% 4.1%;
+--foreground: 60 9.1% 97.8%;
+--card: 20 14.3% 4.1%;
+--card-foreground: 60 9.1% 97.8%;
+--popover: 20 14.3% 4.1%;
+--popover-foreground: 60 9.1% 97.8%;
+--primary: 60 9.1% 97.8%;
+--primary-foreground: 24 9.8% 10%;
+--secondary: 12 6.5% 15.1%;
+--secondary-foreground: 60 9.1% 97.8%;
+--muted: 12 6.5% 15.1%;
+--muted-foreground: 24 5.4% 63.9%;
+--accent: 12 6.5% 15.1%;
+--accent-foreground: 60 9.1% 97.8%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 60 9.1% 97.8%;
+--border: 12 6.5% 15.1%;
+--input: 12 6.5% 15.1%;
+--ring: 24 5.7% 82.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <div class="bg-background text-primary-foreground">
+    <nav class="bg-primary py-2 px-4">
+        <p class="text-sm text-primary-foreground">Home > คณะวิชา</p>
+    </nav>
+    
+    <section class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold text-accent mb-4">หน้าตั้งค่าผู้ใช้</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <h2 class="text-xl font-bold text-accent">User Dashboard</h2>
+                <p>หน้าต่างที่แสดงข้อมูลผู้ใช้ เช่น ชื่อ ประวัติการใช้งาน ประวัติการสนทนากับแชทบอท</p>
+                <button class="bg-accent text-accent-foreground px-4 py-2 mt-2 rounded-full shadow-lg hover:bg-accent/80 transition duration-300">แก้ไขข้อมูลส่วนตัว</button>
+            </div>
+            <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <h2 class="text-xl font-bold text-accent">Notification Settings</h2>
+                <p>การตั้งค่าการแจ้งเตือน เช่น แจ้งเตือนผ่านอีเมลหรือข้อความในระบบ</p>
+                <button class="bg-accent text-accent-foreground px-4 py-2 mt-2 rounded-full shadow-lg hover:bg-accent/80 transition duration-300">ตั้งค่าแจ้งเตือน</button>
+            </div>
+        </div>
+        
+        <div class="fixed bottom-4 right-4">
+            <button class="bg-accent text-accent-foreground px-4 py-2 rounded-full shadow-lg hover:bg-accent/80 transition duration-300">เริ่มต้นการสนทนากับแชทบอท</button>
+        </div>
+    </section>
+    
+    <footer class="bg-footer text-footer-foreground py-4 text-center">
+        <div>ข้อมูลติดต่อ: 123 ถนน อำเภอ จังหวัด 12345 | 02-123-4567 | info@nisitguide.com</div>
+        <div class="mt-2 space-x-4">
+            <a href="#" class="hover:text-secondary transition duration-300">Facebook</a>
+            <a href="#" class="hover:text-secondary transition duration-300">Twitter</a>
+            <a href="#" class="hover:text-secondary transition duration-300">Instagram</a>
+        </div>
+        <div class="mt-2 space-x-4">
+            <a href="#" class="hover:text-secondary transition duration-300">นโยบายความเป็นส่วนตัว</a>
+            <a href="#" class="hover:text-secondary transition duration-300">ข้อกำหนดการใช้งาน</a>
+        </div>
+    </footer>
+</div>
+
+
+  </body>
+</html>

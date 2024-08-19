@@ -1,0 +1,403 @@
+@layer base {
+    :root {
+         --background: #f3f2f2; /* สีพื้นหลังหลัก */
+            --foreground: #000000; /* สีข้อความหลัก หรือสีพื้นหลังสำหรับข้อความ */
+            --card: #ffffff; /* สีพื้นหลังของการ์ด */
+            --card-foreground: #000000; /* สีข้อความบนการ์ด */
+            --primary: #ffffff; /* สีหลักที่ใช้ใน UI เช่น ปุ่มหลัก */
+            --primary-foreground: #000000; /* สีข้อความบนปุ่มหลัก */
+            --secondary: #ffffff; /* สีรองที่ใช้ใน UI เช่น พื้นหลังรอง */
+            --secondary-foreground: #000000; /* สีข้อความบนพื้นหลังรอง */
+            --muted: #000000; /* สีที่ใช้สำหรับส่วนที่ต้องการเน้นน้อย */
+            --muted-foreground: #737481; /* สีข้อความสำหรับส่วนที่เน้นน้อย */
+            --accent: #022a6f; /* สีเน้นที่ใช้ใน UI เช่น ลิงก์หรือปุ่มเน้น */
+            --accent-foreground: #000000; /* สีข้อความบนส่วนเน้น */
+            --destructive: #d93636; /* สีที่ใช้สำหรับการกระทำที่ทำลาย เช่น ปุ่มลบ */
+            --destructive-foreground: #fb0404; /* สีข้อความบนปุ่มทำลาย */
+            --border: #e5e6eb; /* สีของขอบกรอบ */
+            --input: #e5e6eb; /* สีพื้นหลังของช่องกรอกข้อมูล */
+            --ring: #07090b; /* สีของขอบแสง (ring) รอบๆ ส่วนที่เน้น */
+            --radius: 0.5rem; /* รัศมีของมุมโค้ง */
+        }
+        
+        .dark {
+            --background: #1e1e1e; /* สีพื้นหลังหลักในโหมดมืด */
+            --foreground: #fafafa; /* สีข้อความหลักในโหมดมืด */
+            --card: #2c2c2c; /* สีพื้นหลังของการ์ดในโหมดมืด */
+            --card-foreground: #fafafa; /* สีข้อความบนการ์ดในโหมดมืด */
+            --primary: #fafafa; /* สีหลักที่ใช้ใน UI เช่น ปุ่มหลักในโหมดมืด */
+            --primary-foreground: #07090b; /* สีข้อความบนปุ่มหลักในโหมดมืด */
+            --secondary: #3e3e3e; /* สีรองที่ใช้ใน UI เช่น พื้นหลังรองในโหมดมืด */
+            --secondary-foreground: #fafafa; /* สีข้อความบนพื้นหลังรองในโหมดมืด */
+            --muted: #3e3e3e; /* สีที่ใช้สำหรับส่วนที่ต้องการเน้นน้อยในโหมดมืด */
+            --muted-foreground: #a2a3aa; /* สีข้อความสำหรับส่วนที่เน้นน้อยในโหมดมืด */
+            --accent: #3e3e3e; /* สีเน้นที่ใช้ใน UI เช่น ลิงก์หรือปุ่มเน้นในโหมดมืด */
+            --accent-foreground: #fafafa; /* สีข้อความบนส่วนเน้นในโหมดมืด */
+            --destructive: #e63946; /* สีที่ใช้สำหรับการกระทำที่ทำลายในโหมดมืด */
+            --destructive-foreground: #fafafa; /* สีข้อความบนปุ่มทำลายในโหมดมืด */
+            --border: #3e3e3e; /* สีของขอบกรอบในโหมดมืด */
+            --input: #3e3e3e; /* สีพื้นหลังของช่องกรอกข้อมูลในโหมดมืด */
+            --ring: #d3d4e4; /* สีของขอบแสง (ring) รอบๆ ส่วนที่เน้นในโหมดมืด */
+        }    
+}
+
+
+/* From Uiverse.io by biswacpcode */ 
+.buttonแทบบน {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .buttonแทบบน::before {
+    margin-left: auto;
+  }
+  
+  .buttonแทบบน::after, .buttonแทบบน::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #40B3A2;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  .buttonแทบบน:hover::after, .buttonแทบบน:hover::before {
+    width: 100%;
+  }
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-right: 20px; /* ระยะห่างจากขอบขวาของหน้าจอ */
+    gap: 10px;
+}
+
+.navbar a {
+    margin-left: 15px; /* ระยะห่างระหว่างลิงก์แต่ละลิงก์ */
+}
+
+/* From Uiverse.io by mi-series */ 
+.btnเข้าสู่ระบบลงทะเบียน {
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #40B3A2;
+    min-width: 180px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .btnเข้าสู่ระบบลงทะเบียน:hover {
+    opacity: .95;
+  }
+  
+  .btnเข้าสู่ระบบลงทะเบียน .animation {
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+  }
+  
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+  }
+
+
+  /* From Uiverse.io by gharsh11032000 */ 
+.animated-buttonเริ่มต้นการใช้งาน {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 0 2px greenyellow;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน svg {
+    position: absolute;
+    width: 24px;
+    fill: greenyellow;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน:hover svg {
+    fill: #212121;
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px greenyellow;
+  }
+  
+  .animated-buttonเริ่มต้นการใช้งาน:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  
+
+  
+  /* From Uiverse.io by MuhammadHasann */ 
+.buttonเริ่มต้นการสนทนากับแชทบอท {
+    --black-700: hsla(0 0% 12% / 1);
+    --border_radius: 9999px;
+    --transtion: 0.3s ease-in-out;
+    --offset: 2px;
+  
+    cursor: pointer;
+    position: relative;
+  
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  
+    transform-origin: center;
+  
+    padding: 1rem 2rem;
+    background-color: transparent;
+  
+    border: none;
+    border-radius: var(--border_radius);
+    transform: scale(calc(1 + (var(--active, 0) * 0.1)));
+  
+    transition: transform var(--transtion);
+  }
+  
+  .buttonเริ่มต้นการสนทนากับแชทบอท::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-700);
+  
+    border-radius: var(--border_radius);
+    box-shadow: inset 0 0.5px hsl(0, 0%, 100%), inset 0 -1px 2px 0 hsl(0, 0%, 0%),
+      0px 4px 10px -4px hsla(0 0% 0% / calc(1 - var(--active, 0))),
+      0 0 0 calc(var(--active, 0) * 0.375rem) hsl(260 97% 50% / 0.75);
+  
+    transition: all var(--transtion);
+    z-index: 0;
+  }
+  
+  .buttonเริ่มต้นการสนทนากับแชทบอท::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: 100%;
+    height: 100%;
+    background-color: hsla(260 97% 61% / 0.75);
+    background-image: radial-gradient(
+        at 51% 89%,
+        hsla(266, 45%, 74%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 100% 100%, hsla(266, 36%, 60%, 1) 0px, transparent 50%),
+      radial-gradient(at 22% 91%, hsla(266, 36%, 60%, 1) 0px, transparent 50%);
+    background-position: top;
+  
+    opacity: var(--active, 0);
+    border-radius: var(--border_radius);
+    transition: opacity var(--transtion);
+    z-index: 2;
+  }
+  
+  .buttonเริ่มต้นการสนทนากับแชทบอท:is(:hover, :focus-visible) {
+    --active: 1;
+  }
+  .buttonเริ่มต้นการสนทนากับแชทบอท:active {
+    transform: scale(1);
+  }
+  
+  .buttonเริ่มต้นการสนทนากับแชทบอท .dots_border {
+    --size_border: calc(100% + 2px);
+  
+    overflow: hidden;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: var(--size_border);
+    height: var(--size_border);
+    background-color: transparent;
+  
+    border-radius: var(--border_radius);
+    z-index: -10;
+  }
+  
+  .buttonเริ่มต้นการสนทนากับแชทบอท .dots_border::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: left;
+    transform: rotate(0deg);
+  
+    width: 100%;
+    height: 2rem;
+    background-color: white;
+  
+    mask: linear-gradient(transparent 0%, white 120%);
+    animation: rotate 2s linear infinite;
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .buttonเริ่มต้นการสนทนากับแชทบอท .sparkle {
+    position: relative;
+    z-index: 10;
+  
+    width: 1.75rem;
+  }
+  
+  .buttonเริ่มต้นการสนทนากับแชทบอท .sparkle .path {
+    fill: currentColor;
+    stroke: currentColor;
+  
+    transform-origin: center;
+  
+    color: hsl(0, 0%, 100%);
+  }
+  
+  .buttonเริ่มต้นการสนทนากับแชทบอท:is(:hover, :focus) .sparkle .path {
+    animation: path 1.5s linear 0.5s infinite;
+  }
+  
+  .buttonเริ่มต้นการสนทนากับแชทบอท .sparkle .path:nth-child(1) {
+    --scale_path_1: 1.2;
+  }
+  .buttonเริ่มต้นการสนทนากับแชทบอท .sparkle .path:nth-child(2) {
+    --scale_path_2: 1.2;
+  }
+  .buttonเริ่มต้นการสนทนากับแชทบอท .sparkle .path:nth-child(3) {
+    --scale_path_3: 1.2;
+  }
+  
+  @keyframes path {
+    0%,
+    34%,
+    71%,
+    100% {
+      transform: scale(1);
+    }
+    17% {
+      transform: scale(var(--scale_path_1, 1));
+    }
+    49% {
+      transform: scale(var(--scale_path_2, 1));
+    }
+    83% {
+      transform: scale(var(--scale_path_3, 1));
+    }
+  }
+  
+  .buttonเริ่มต้นการสนทนากับแชทบอท .text_button {
+    position: relative;
+    z-index: 10;
+  
+    background-image: linear-gradient(
+      90deg,
+      hsla(0 0% 100% / 1) 0%,
+      hsla(0 0% 100% / var(--active, 0)) 120%
+    );
+    background-clip: text;
+  
+    font-size: 1rem;
+    color: transparent;
+  }
+  
