@@ -41,7 +41,7 @@
                                 foreground: 'var(--popover-foreground)'
                             },
                             card: {
-                                DEFAULT: 'var(--card)',
+                                DEFAULT:  'var(--background)',
                                 foreground: 'var(--card-foreground)'
                             },
                         },
@@ -51,13 +51,16 @@
         </script>
   </head>
   <body>
-    <div class="bg-background text-primary-foreground">
-    
-    <header class="flex justify-between items-center p-4 shadow-lg bg-gradient-to-r from-primary to-secondary">
-        <a href="HomePage.html">
-            <img src="images/โลโก้ IS Guide.png" alt="IS Guide Logo" width="250" height="100" />
-        </a>
-        <div class="navbar">
+    <div class="header">
+        <header class="navbar flex items-center p-4 shadow-lg bg-gradient-to-r from-primary to-secondary">
+            <a href="HomePage.html">
+            <img  class="imgแทบบน" src="images/โลโก้ISGuide.png" alt="IS Guide Logo" width="240" height="100" />
+            </a>
+
+            <a href="HomePage.html">
+                <button class="buttonแทบบน"><i class="animation"></i>Home<i class="animation"></i>
+                </button>
+            </a>
             <a href="หน้าการเรียนรู้และกิจกรรม (LearningAndActivitiesPage).html">
                 <button class="buttonแทบบน"><i class="animation"></i>เรียนรู้และกิจกรรม<i class="animation"></i>
                 </button>
@@ -74,37 +77,47 @@
                 <button class="buttonแทบบน"><i class="animation"></i>ติดต่อ<i class="animation"></i>
                 </button>
             </a>
+            <a href="หน้าสอบถามและติดต่อ (ContactAndInquiriesPage).html">
+                <button class="buttonแทบบน"><i class="animation"></i>ติดต่อ<i class="animation"></i>
+                </button>
+            </a>
+            <a href="หน้าสอบถามและติดต่อ (ContactAndInquiriesPage).html">
+                <button class="buttonแทบบน"><i class="animation"></i>ติดต่อ<i class="animation"></i>
+                </button>
+            </a>
+            <a href="หน้าสอบถามและติดต่อ (ContactAndInquiriesPage).html">
+                <button class="buttonแทบบน"><i class="animation"></i>ติดต่อ<i class="animation"></i>
+                </button>
+            </a>
+        </header>
         </div>
-    </header>
     
-    <section class="flex flex-col items-center justify-center py-16 bg-gradient-to-b from-background to-card">
-        <img src="images/คณะสหวิทยาการ.jpg" alt="Nisit Guide Campus" class="mb-4 rounded-lg shadow-lg" />
-        <h1 class="text-5xl font-extrabold text-center leading-tight text-accent">IS Guide ยินดีต้อนรับสู่ การใช้ชีวิตใน</h1>
-        <h1 class="text-5xl font-extrabold text-center leading-tight text-accent">คณะสหวิทยาการ</h1>
+        <section id="background-section" class="flex flex-col items-center justify-center py-16 bg-gradient-to-b from-background to-card">
+            <h1 class="text-5xl font-extrabold text-center leading-tight text-accent bg-text">IS Guide ยินดีต้อนรับสู่ การใช้ชีวิตใน</h1>
+            <h1 class="text-5xl font-extrabold text-center leading-tight text-accent bg-text">คณะสหวิทยาการ</h1>
 
-
-        <button class="animated-buttonเริ่มต้นการใช้งาน">
-        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-            <path
-            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-            ></path>
-        </svg>
-        <span class="text">เริ่มต้นการใช้งาน</span>
-        <span class="circle"></span>
-        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-            <path
-            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-            ></path>
-        </svg>
+        <button class="animated-buttonเริ่มต้นการใช้งาน ">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+            </svg>
+            <span class="text ">เริ่มต้นการใช้งาน</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+            </svg>
         </button>
-
     </section>
+
+    <script src="JavaScript/scriptHomePage.js"></script>
+    
+    
+    
     
     <section class="container mx-auto py-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div class="p-6 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                 <h2 class="text-2xl font-bold mb-4 text-accent">แนะนำมหาวิทยาลัย</h2>
-                <p>ข้อมูลสั้น ๆ เกี่ยวกับประวัติและความสำคัญของวิทยาเขตหนองคาย</p>
+                <p class="custom-text-color">ข้อมูลสั้น ๆ เกี่ยวกับประวัติและความสำคัญของวิทยาเขตหนองคาย</p>
             </div>
             <div class="p-6 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                 <h2 class="text-2xl font-bold mb-4 text-accent">บริการสำหรับนักศึกษา</h2>
@@ -126,7 +139,7 @@
         </div>
         <div class="mt-8">
             <h2 class="text-2xl font-bold mb-4 text-accent">ข่าวสารและกิจกรรม</h2>
-            <p>อัปเดตข่าวสารและกิจกรรมล่าสุดสำหรับนักศึกษา</p>
+            <p class="custom-text-color">อัปเดตข่าวสารและกิจกรรมล่าสุดสำหรับนักศึกษา</p>
         </div>
     </section>
     
@@ -168,7 +181,7 @@
           </button>
     </div>
     
-    <footer class="bg-footer text-footer-foreground py-4 text-center">
+    <footer class="bg-footerข้างล่าง text-footer-foregroundข้างล่าง py-4 text-centerข้างล่าง">
         <div>ข้อมูลติดต่อ: มหาวิทยาลัยขอนแก่น วิทยาเขตหนองคาย 112 หมู่ 7 บ้านหนองเดิ่น ตำบลหนองกอมเกาะ อำเภอเมือง จังหวัดหนองคาย 43000 | 042-415600 FAX: 042-415699 | is.inbox@kku.ac.th</div>
         <div class="mt-2 space-x-4">
             <a href="#" class="hover:text-secondary transition duration-300">Facebook</a>

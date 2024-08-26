@@ -1,32 +1,52 @@
-@layer base {
-    :root {
-         --background: #f3f2f2; /* สีพื้นหลังหลัก */
-            --foreground: #000000; /* สีข้อความหลัก หรือสีพื้นหลังสำหรับข้อความ */
-            --card: #ffffff; /* สีพื้นหลังของการ์ด */
-            --card-foreground: #000000; /* สีข้อความบนการ์ด */
-            --primary: #ffffff; /* สีหลักที่ใช้ใน UI เช่น ปุ่มหลัก */
-            --primary-foreground: #000000; /* สีข้อความบนปุ่มหลัก */
-            --secondary: #ffffff; /* สีรองที่ใช้ใน UI เช่น พื้นหลังรอง */
-            --secondary-foreground: #000000; /* สีข้อความบนพื้นหลังรอง */
-            --muted: #000000; /* สีที่ใช้สำหรับส่วนที่ต้องการเน้นน้อย */
-            --muted-foreground: #737481; /* สีข้อความสำหรับส่วนที่เน้นน้อย */
-            --accent: #022a6f; /* สีเน้นที่ใช้ใน UI เช่น ลิงก์หรือปุ่มเน้น */
-            --accent-foreground: #000000; /* สีข้อความบนส่วนเน้น */
-            --destructive: #d93636; /* สีที่ใช้สำหรับการกระทำที่ทำลาย เช่น ปุ่มลบ */
-            --destructive-foreground: #fb0404; /* สีข้อความบนปุ่มทำลาย */
-            --border: #e5e6eb; /* สีของขอบกรอบ */
-            --input: #e5e6eb; /* สีพื้นหลังของช่องกรอกข้อมูล */
-            --ring: #07090b; /* สีของขอบแสง (ring) รอบๆ ส่วนที่เน้น */
-            --radius: 0.5rem; /* รัศมีของมุมโค้ง */
-        } 
+/* เปลี่ยนสีพื้นหลังของทั้งเว็บไซต์ */
+body {
+  background-color: #dfdfdf; /* สีพื้นหลังใหม่ */
 }
+
+
+#background-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: contain; /* ปรับให้ภาพมีขนาดพอดีไม่ครอบคลุมทั้งจอ */
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* สไตล์ของหัวข้อ */
+.bg-text {
+  position: relative; /* ใช้สำหรับการจัดการพื้นหลัง */
+  display: inline-block; /* ทำให้พื้นหลังแสดงผลเฉพาะข้อความ */
+  padding: 0.5em 1em; /* เพิ่มระยะห่างภายในพื้นหลัง */
+  background-color: rgba(216, 216, 216, 0.6); /* สีพื้นหลังที่มีความโปร่งใส (สีดำ 60%) */
+  border-radius: 5px; /* มุมโค้งของพื้นหลัง */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เงาที่ด้านล่างของพื้นหลัง */
+}
+
+
+.container {
+  background-color: #ffffff; /* เปลี่ยนเป็นสีพื้นหลังที่ต้องการ */
+}
+
+/* กำหนดสีของข้อความใน <p> */
+p.custom-text-color {
+    color: #2f2f2f; /* เปลี่ยนเป็นสีที่คุณต้องการ เช่น สีฟ้า */
+    font-size: 18px; /* ขนาดตัวอักษร */
+    line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
+}
+
 
 
 /* From Uiverse.io by biswacpcode */ 
 .buttonแทบบน {
-    color: rgb(0, 0, 0);
+    color: rgb(254, 254, 254); /* สีของข้อความปุ่มเมนู */
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px; /* ขนาดของข้อความ */
     border: none;
     background: none;
     font-weight: 600;
@@ -55,15 +75,29 @@
 
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
     align-items: center;
     width: 100%;
-    padding-right: 20px; /* ระยะห่างจากขอบขวาของหน้าจอ */
     gap: 10px;
 }
 
+/* สไตล์ของแถบเมนู */
+.header {
+  position: sticky; /* ทำให้แถบเมนูเลื่อนตาม */
+  top: 0; /* ปักหมุดที่ด้านบนของหน้า */
+  background-color: #02245e; /* สีพื้นหลังของแถบเมนู */
+  border-bottom: 1px solid #ddd; /* ขอบด้านล่างของแถบเมนู */
+  z-index: 1000; /* ให้แถบเมนูอยู่เหนือเนื้อหาทั้งหมด */
+}
+
+/* สไตล์ของปุ่มเมนู */
 .navbar a {
-    margin-left: 15px; /* ระยะห่างระหว่างลิงก์แต่ละลิงก์ */
+  margin-left: 15px; /* ระยะห่างระหว่างลิงก์แต่ละลิงก์ */
+}
+
+
+.imgแทบบน {
+  margin-right: 200px; /* เพิ่มระยะห่างจากโลโก้ไปยังปุ่มเมนูถัดไป */
 }
 
 /* From Uiverse.io by mi-series */ 
@@ -110,6 +144,7 @@
 
   /* From Uiverse.io by gharsh11032000 */ 
 .animated-buttonเริ่มต้นการใช้งาน {
+  background-color: #2980b9; /* เปลี่ยนสีเมื่อเอาเมาส์ไปวางบนปุ่ม */
     position: relative;
     display: flex;
     align-items: center;
@@ -122,7 +157,7 @@
     border-radius: 100px;
     font-weight: 600;
     color: rgb(0, 0, 0);
-    box-shadow: 0 0 0 2px greenyellow;
+    box-shadow: 0 0 0 2px rgb(0, 255, 55);
     cursor: pointer;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -131,7 +166,7 @@
   .animated-buttonเริ่มต้นการใช้งาน svg {
     position: absolute;
     width: 24px;
-    fill: greenyellow;
+    fill: rgb(0, 255, 55);
     z-index: 9;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   }
@@ -151,7 +186,7 @@
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
-    background-color: greenyellow;
+    background-color: rgb(0, 255, 55);
     border-radius: 50%;
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -165,8 +200,9 @@
   }
   
   .animated-buttonเริ่มต้นการใช้งาน:hover {
+    background-color: #41ffb6; /* เปลี่ยนสีเมื่อเอาเมาส์ไปวางบนปุ่ม */
     box-shadow: 0 0 0 12px transparent;
-    color: #212121;
+    color: #000000;
     border-radius: 12px;
   }
   
@@ -381,3 +417,28 @@
     color: transparent;
   }
   
+  .bg-footerข้างล่าง {
+    background-image: url('your-image-url.jpg'); /* เปลี่ยน URL ให้เป็นที่อยู่ของภาพที่คุณต้องการใช้ */
+    background-color: 02245e; /* สีพื้นหลังที่ซ้อนอยู่ด้านหลังของภาพพื้นหลัง (สีดำโปร่งใส 50%) */
+    background-blend-mode: overlay; /* ผสมผสานสีพื้นหลังและภาพพื้นหลัง */
+    background-size: cover; /* ปรับให้ภาพพื้นหลังครอบคลุมทั้งพื้นที่ */
+    background-position: center; /* จัดตำแหน่งภาพพื้นหลังที่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    padding: 20px 0; /* เพิ่ม Padding ด้านบนและล่าง */
+    color: #ffffff; /* สีข้อความใน <footer> */
+}
+
+.text-footer-foregroundข้างล่าง {
+    color: #ffffff; /* สีของข้อความภายใน footer */
+}
+
+
+.hover\\:text-secondary:hover {
+    color: #ffcc00; /* สีของข้อความเมื่อ hover บนลิงก์ */
+}
+
+.aข้างล่าง {
+    text-decoration: none; /* ลบขีดเส้นใต้ของลิงก์ */
+    color: inherit; /* ใช้สีเดียวกับข้อความหลัก */
+    transition: color 0.3s ease; /* เพิ่ม Transition เมื่อเปลี่ยนสี */
+}
