@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Cssสาขาวิชา.css">
+    <link rel="stylesheet" href="css/Cssหน้าข้อมูลคณะวิชา.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
 		<script type="text/javascript">
@@ -41,7 +41,7 @@
                                 foreground: 'var(--popover-foreground)'
                             },
                             card: {
-                                DEFAULT: 'var(--card)',
+                                DEFAULT:  'var(--background)',
                                 foreground: 'var(--card-foreground)'
                             },
                         },
@@ -51,151 +51,164 @@
         </script>
   </head>
   <body>
-    <div class="bg-background text-primary-foreground">
-    
-    <header class="flex justify-between items-center p-4 shadow-lg bg-gradient-to-r from-primary to-secondary">
-        <a href="HomePage.html">
-            <img src="images/โลโก้นิสิตไกด์.png" alt="Nisit Guide Logo" width="150" height="75" />
-        </a>
-        <div class="navbar">
-            <a href="หน้าการเรียนรู้และกิจกรรม (LearningAndActivitiesPage).html">
-                <button class="buttonแทบบน"><i class="animation"></i>เรียนรู้และกิจกรรม<i class="animation"></i>
+    <div class="header">
+        <header class="navbar flex items-center p-4 shadow-lg bg-gradient-to-r from-primary to-secondary">
+            <a href="HomePage.html">
+            <img  class="imgแทบบน" src="images/โลโก้ISGuide.png" alt="IS Guide Logo" width="240" height="100" />
+            </a>
+
+            <a href="HomePage.html">
+                <button class="buttonแทบบน"><i class="animation"></i>Home<i class="animation"></i>
                 </button>
             </a>
-            <a href="หน้าข้อมูลคณะวิชา (FacultyInformationPage).html">
-                <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชา<i class="animation"></i>
-                </button>
-            </a>
-            <a href="หน้าบริการนักศึกษา (StudentServicesPage).html">
-                <button class="buttonแทบบน"><i class="animation"></i>บริการต่างๆ<i class="animation"></i>
+            <div class="dropdown">
+                <a href="หน้าการเรียนรู้และกิจกรรม (LearningAndActivitiesPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>เรียนรู้และกิจกรรม<i class="animation"></i>
+                    </button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="หน้าข่าวสารคณะ (FacultyNewsPage).html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ข่าวสารคณะ<i class="animation"></i>
+                        </button></a>
+                    <a href="หน้ากิจกรรม (ActivitiesPage).html">
+                        <button class="buttonแทบบน"><i class="animation"></i>กิจกรรม<i class="animation"></i>
+                        </button></a>
+                    <a href="หน้าการเรียนรู้ (LearningPage).html">
+                        <button class="buttonแทบบน"><i class="animation"></i>การเรียนรู้<i class="animation"></i>
+                        </button></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="หน้าบริการนักศึกษา (StudentServicesPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>บริการ<i class="animation"></i>
+                    </button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="แผนที่.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>แผนที่<i class="animation"></i>
+                        </button></a>
+                    <a href="ห้องสมุดออนไลน์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ห้องสมุดออนไลน์<i class="animation"></i>
+                        </button></a>
+                    <a href="ระบบจองหอพักนักศึกษา.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ระบบจองหอพักนักศึกษา<i class="animation"></i>
+                        </button></a> 
+                    <a href="ตรวจสอบค่าไฟฟ้าหอพัก.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ตรวจสอบค่าไฟฟ้าหอพัก<i class="animation"></i>
+                        </button></a>
+                    <a href="ทุนการศึกษา.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ทุนการศึกษา<i class="animation"></i>
+                        </button></a>
+                    <a href="REG_KKU.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>REG_KKU<i class="animation"></i>
+                        </button></a>
+                    <a href="REQ_KKU.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>REQ_KKU<i class="animation"></i>
+                        </button></a>
+                    <a href="ตารางสอบนักศึกษา.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ตารางสอบนักศึกษา<i class="animation"></i>
+                        </button></a> 
+                    <a href="กลุ่มงานบริหารคณะ.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>กลุ่มงานบริหารคณะ<i class="animation"></i>
+                        </button></a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="หน้าข้อมูลคณะวิชา (FacultyInformationPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชา<i class="animation"></i>
+                    </button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="สาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์<i class="animation"></i>
+                        </button></a>
+                    <a href="สาขานิติศาสตร์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขานิติศาสตร์ <i class="animation"></i>
+                        </button></a> 
+                    <a href="สาขาวิชาบริหารธุรกิจ.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชาบริหารธุรกิจ <i class="animation"></i>
+                        </button></a>
+                    <a href="สาขาวิชาวิทยาศาสตร์ประยุกต์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชาวิทยาศาสตร์ประยุกต์<i class="animation"></i>
+                        </button></a>
+                    <a href="สาขาวิชาศิลปะและศึกษาศาสตร์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชาศิลปะและศึกษาศาสตร์<i class="animation"></i>
+                        </button></a> 
+                    <a href="สาขาวิชาสังคมศาสตร์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชาสังคมศาสตร์<i class="animation"></i>
+                        </button></a> 
+                </div>
+            </div>
+            <a href="บุคลากร.html">
+                <button class="buttonแทบบน"><i class="animation"></i>บุคลากร<i class="animation"></i>
                 </button>
             </a>
             <a href="หน้าสอบถามและติดต่อ (ContactAndInquiriesPage).html">
                 <button class="buttonแทบบน"><i class="animation"></i>ติดต่อ<i class="animation"></i>
                 </button>
             </a>
+        </header> 
         </div>
-        <a href="Login.html">
-            <button class="btnเข้าสู่ระบบลงทะเบียน"><i class="animation"></i>เข้าสู่ระบบ/ลงทะเบียน<i class="animation"></i>
-            </button>
-        </a>
-    </header>
-
-    <div class="card">
-    <div class="top-section">
-        <div class="border"></div>
-        <div class="icons">
-        <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 94 94" class="svg">
-            <path fill="white" d="M38.0481 4.82927C38.0481 2.16214 40.018 0 42.4481 0H51.2391C53.6692 0 55.6391 2.16214 55.6391 4.82927V40.1401C55.6391 48.8912 53.2343 55.6657 48.4248 60.4636C43.6153 65.2277 36.7304 67.6098 27.7701 67.6098C18.8099 67.6098 11.925 65.2953 7.11548 60.6663C2.37183 56.0036 3.8147e-06 49.2967 3.8147e-06 40.5456V4.82927C3.8147e-06 2.16213 1.96995 0 4.4 0H13.2405C15.6705 0 17.6405 2.16214 17.6405 4.82927V39.1265C17.6405 43.7892 18.4805 47.2018 20.1605 49.3642C21.8735 51.5267 24.4759 52.6079 27.9678 52.6079C31.4596 52.6079 34.0127 51.5436 35.6268 49.4149C37.241 47.2863 38.0481 43.8399 38.0481 39.0758V4.82927Z"></path>
-            <path fill="white" d="M86.9 61.8682C86.9 64.5353 84.9301 66.6975 82.5 66.6975H73.6595C71.2295 66.6975 69.2595 64.5353 69.2595 61.8682V4.82927C69.2595 2.16214 71.2295 0 73.6595 0H82.5C84.9301 0 86.9 2.16214 86.9 4.82927V61.8682Z"></path>
-            <path fill="white" d="M2.86102e-06 83.2195C2.86102e-06 80.5524 1.96995 78.3902 4.4 78.3902H83.6C86.0301 78.3902 88 80.5524 88 83.2195V89.1707C88 91.8379 86.0301 94 83.6 94H4.4C1.96995 94 0 91.8379 0 89.1707L2.86102e-06 83.2195Z"></path>
-            </svg>
-        </div>
-        <div class="social-media">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="svg">
-            <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
-            </svg>
-            <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
-            </svg>
-            <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-            <path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"></path>
-            </svg>
-        </div>
-        </div>
-    </div>
-    <div class="bottom-section">
-        <span class="title">นิติ</span>
-        <div class="row row1">
-        <div class="item">
-            <span class="big-text">100%</span>
-            <span class="regular-text">สาวสวย</span>
-        </div>
-        <div class="item">
-            <span class="big-text">100%</span>
-            <span class="regular-text">Free for use</span>
-        </div>
-        <div class="item">
-            <span class="big-text">38,631</span>
-            <span class="regular-text">Contributers</span>
-        </div>
-        </div>
-    </div>
-    </div>
-    
+		
     <section class="container mx-auto py-8">
-        <h1 class="text-3xl font-bold text-accent mb-4">รายชื่อคณะวิชา</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                <img src="https://placehold.co/300x300.png?text=คณะ1" alt="คณะ1 Icon" class="mx-auto" />
-                <h2 class="text-xl font-bold text-accent mt-4">คณะ 1</h2>
-                <p>รายละเอียดเกี่ยวกับคณะ 1 ที่น่าสนใจ</p>
-            </div>
-            <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                <img src="https://placehold.co/300x300.png?text=คณะ2" alt="คณะ2 Icon" class="mx-auto" />
-                <h2 class="text-xl font-bold text-accent mt-4">คณะ 2</h2>
-                <p>รายละเอียดเกี่ยวกับคณะ 2 ที่น่าสนใจ</p>
-            </div>
-            <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                <img src="https://placehold.co/300x300.png?text=คณะ3" alt="คณะ3 Icon" class="mx-auto" />
-                <h2 class="text-xl font-bold text-accent mt-4">คณะ 3</h2>
-                <p>รายละเอียดเกี่ยวกับคณะ 3 ที่น่าสนใจ</p>
-            </div>
-        </div>
+        <h1 class="text-3xl font-bold text-accent mb-4">สาขาวิชา</h1>
         
-    <div class="fixed bottom-4 right-4">
-        <button class="buttonเริ่มต้นการสนทนากับแชทบอท">
-            <div class="dots_border"></div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              class="sparkle"
-            >
-              <path
-                class="path"
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                stroke="black"
-                fill="black"
-                d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z"
-              ></path>
-              <path
-                class="path"
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                stroke="black"
-                fill="black"
-                d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z"
-              ></path>
-              <path
-                class="path"
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                stroke="black"
-                fill="black"
-                d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
-              ></path>
-            </svg>
-            <span class="text_button">เริ่มต้นการสนทนากับแชทบอท</span>
-          </button>
-    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+           
+            <!-- สาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์ -->
+            <a href="สาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์.html" class="block">
+                <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <h2 class="text-xl font-bold text-accent">สาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์</h2>
+                    <p>หลักสูตรวิทยาศาสตรบัณฑิต</p>
+                </div>
+            </a>
+        
+            <!-- สาขานิติศาสตร์ -->
+            <a href="สาขานิติศาสตร์.html" class="block">
+                <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <h2 class="text-xl font-bold text-accent">สาขานิติศาสตร์</h2>
+                    <p>หลักสูตร และการฝึกปฏิบัติงานด้านกฎหมาย</p>
+                </div>
+            </a>
+        
+            <!-- สาขาวิชาบริหารธุรกิจ -->
+            <a href="สาขาวิชาบริหารธุรกิจ.html" class="block">
+                <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <h2 class="text-xl font-bold text-accent">สาขาวิชาบริหารธุรกิจ</h2>
+                    <p>บริหารธุรกิจ การจัดการ และการเป็นผู้ประกอบการ</p>
+                </div>
+            </a>
+        
+            <!-- สาขาวิชาวิทยาศาสตร์ประยุกต์ -->
+            <a href="สาขาวิชาวิทยาศาสตร์ประยุกต์.html" class="block">
+                <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <h2 class="text-xl font-bold text-accent">สาขาวิชาวิทยาศาสตร์ประยุกต์</h2>
+                    <p>การนำความรู้ไปประยุกต์ใช้ในงานวิจัยและอุตสาหกรรม</p>
+                </div>
+            </a>
+        
+            <!-- สาขาวิชาศิลปะและศึกษาศาสตร์ -->
+            <a href="สาขาวิชาศิลปะและศึกษาศาสตร์.html" class="block">
+                <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <h2 class="text-xl font-bold text-accent">สาขาวิชาศิลปะและศึกษาศาสตร์</h2>
+                    <p>ศึกษาศิลปะและการฝึกอบรมด้านการศึกษาศาสตร์</p>
+                </div>
+            </a>
+        
+            <!-- สาขาวิชาสังคมศาสตร์ -->
+            <a href="สาขาวิชาสังคมศาสตร์.html" class="block">
+                <div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <h2 class="text-xl font-bold text-accent">สาขาวิชาสังคมศาสตร์</h2>
+                    <p>สังคมศาสตร์และการวิจัยด้านสังคม</p>
+                </div>
+            </a>
+        
+           
+
     
-    <footer class="bg-footer text-footer-foreground py-4 text-center">
-        <div>ข้อมูลติดต่อ: มหาวิทยาลัยขอนแก่น วิทยาเขตหนองคาย 112 หมู่ 7 บ้านหนองเดิ่น ตำบลหนองกอมเกาะ อำเภอเมือง จังหวัดหนองคาย 43000 | 042-415600 FAX: 042-415699 | is.inbox@kku.ac.th</div>
-        <div class="mt-2 space-x-4">
-            <a href="#" class="hover:text-secondary transition duration-300">Facebook</a>
-            <a href="#" class="hover:text-secondary transition duration-300">Twitter</a>
-            <a href="#" class="hover:text-secondary transition duration-300">Instagram</a>
-        </div>
-        <div class="mt-2 space-x-4">
-            <a href="#" class="hover:text-secondary transition duration-300">นโยบายความเป็นส่วนตัว</a>
-            <a href="#" class="hover:text-secondary transition duration-300">ข้อกำหนดการใช้งาน</a>
-        </div>
-    </footer>
+    </section>
+    
+    
 </div>
-
-
-  </body>
+  
 </html>
