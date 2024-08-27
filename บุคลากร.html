@@ -1,56 +1,60 @@
-<html>
-  <head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Cssการเรียนรู้เเละกิจกรรม.css">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="css/cssบุคลากร.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-		<script type="text/javascript">
-            window.tailwind.config = {
-                darkMode: ['class'],
-                theme: {
-                    extend: {
-                        colors: {
-                            border: 'var(--border)',
-                            input: 'var(--input)',
-                            ring: 'var(--ring)',
-                            background: 'var(--background)',
-                            foreground: 'var(--foreground)',
-                            primary: {
-                                DEFAULT: 'var(--primary)',
-                                foreground: 'var(--primary-foreground)'
-                            },
-                            secondary: {
-                                DEFAULT: 'var(--secondary)',
-                                foreground: 'var(--secondary-foreground)'
-                            },
-                            destructive: {
-                                DEFAULT: 'var(--destructive)',
-                                foreground: 'var(--destructive-foreground)'
-                            },
-                            muted: {
-                                DEFAULT: 'var(--muted)',
-                                foreground: 'var(--muted-foreground)'
-                            },
-                            accent: {
-                                DEFAULT: 'var(--accent)',
-                                foreground: 'var(--accent-foreground)'
-                            },
-                            popover: {
-                                DEFAULT: 'var(--popover)',
-                                foreground: 'var(--popover-foreground)'
-                            },
-                            card: {
-                                DEFAULT:  'var(--background)',
-                                foreground: 'var(--card-foreground)'
-                            },
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'var(--border)',
+                        input: 'var(--input)',
+                        ring: 'var(--ring)',
+                        background: 'var(--background)',
+                        foreground: 'var(--foreground)',
+                        primary: {
+                            DEFAULT: 'var(--primary)',
+                            foreground: 'var(--primary-foreground)'
                         },
-                    }
+                        secondary: {
+                            DEFAULT: 'var(--secondary)',
+                            foreground: 'var(--secondary-foreground)'
+                        },
+                        destructive: {
+                            DEFAULT: 'var(--destructive)',
+                            foreground: 'var(--destructive-foreground)'
+                        },
+                        muted: {
+                            DEFAULT: 'var(--muted)',
+                            foreground: 'var(--muted-foreground)'
+                        },
+                        accent: {
+                            DEFAULT: 'var(--accent)',
+                            foreground: 'var(--accent-foreground)'
+                        },
+                        popover: {
+                            DEFAULT: 'var(--popover)',
+                            foreground: 'var(--popover-foreground)'
+                        },
+                        card: {
+                            DEFAULT: 'var(--background)',
+                            foreground: 'var(--card-foreground)'
+                        },
+                    },
                 }
             }
-        </script>
-  </head>
-  <body>
+        }
+    </script>
+</head>
+<body>
+>>>>>>> b2938eb6c63ad532a706b2abc24a72dd6ff3b598
     <div class="header">
         <header class="navbar flex items-center p-4 shadow-lg bg-gradient-to-r from-primary to-secondary">
             <a href="HomePage.html">
@@ -148,44 +152,59 @@
                 </button>
             </a>
         </header> 
+    </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 bg-background">
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
         </div>
 
-    <section class="container mx-auto py-8">
-        <h1 class="text-3xl font-bold text-accent mb-4">หน้าการเรียนรู้และกิจกรรม</h1>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-			<!-- ข่าวสารคณะ -->
-			<a href="หน้าข่าวสารคณะ.html" class="block">
-				<div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-					<h2 class="text-xl font-bold text-accent">ข่าวสารคณะ</h2>
-					<p>รวมลิงก์ไปยังทรัพยากรการเรียนรู้ต่าง ๆ เช่น ระบบ e-Learning ห้องสมุด การลงทะเบียนเรียน</p>
-					<p>แสดงปฏิทินกิจกรรมที่จะเกิดขึ้นในวิทยาเขต เช่น กิจกรรมต้อนรับน้องใหม่ การแข่งขันกีฬา</p>
-				</div>
-			</a>
-		
-			<!-- กิจกรรม -->
-			<a href="หน้ากิจกรรม.html" class="block">
-				<div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-					<h2 class="text-xl font-bold text-accent">กิจกรรม</h2>
-					<p>กิจกรรมเพื่อกิจกรรม</p>
-				</div>
-			</a>
-		
-			<!-- การเรียนรู้ -->
-			<a href="หน้าการเรียนรู้.html" class="block">
-				<div class="p-4 bg-card rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-					<h2 class="text-xl font-bold text-accent">การเรียนรู้</h2>
-					<p>การเรียนรู้เพื่อเรียนรู้</p>
-				</div>
-			</a>
-		</div>
-		
-    
-    </section>
-    
-    
-</div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Kritsda Khajarern" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Chayada Surawanitkun" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Nattanin Uesin" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Natcharee Jirukkakul" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Thananchai Dasri" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Teerawat Charoenrat" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Thanet Wattanakul" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        </div>
 
-
-  </body>
+</body>
 </html>
+>>>>>>> b2938eb6c63ad532a706b2abc24a72dd6ff3b598

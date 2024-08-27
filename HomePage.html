@@ -237,25 +237,25 @@
             <span class="text_button">เริ่มต้นการสนทนากับแชทบอท</span>
         </button>
     </div>
-    
-    <div id="chatbotWindow" class="chatbot hidden">
-        <div class="chatbot-header">
-            <span>IS Guide</span>
-            <button class="close-chatbot" onclick="toggleChatbot()">×</button>
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-avatar">
+            <div class="chatbot-message" id="chatbotMessage">ยินดีต้อนรับ! ฉันพร้อมช่วยเหลือคุณแล้ว</div>
+            <img src="images/IS.png" alt="Chatbot Avatar">
         </div>
         <div class="chatbot-body" id="chatbotBody">
             <!-- ข้อความแชทจะปรากฏที่นี่ -->
         </div>
-        <div class="chatbot-footer">
-            <textarea id="userMessage" placeholder="พิมพ์ข้อความที่นี่..." class="chatbot-input"></textarea>
-            <button class="send-button" onclick="sendMessage()">
-                ส่ง <!-- <i class="fas fa-paper-plane"></i> -->
-            </button>
-        </div>
+        <textarea id="userMessage" placeholder="พิมพ์ข้อความที่นี่..." class="chatbot-input"></textarea>
+        <button class="send-buttonchatbot" onclick="sendMessage()">ส่ง</button>
+        <button class="send-buttonchatbot" onclick="toggleChatbot()">พับหน้าต่างแชทบอท</button>
     </div>
     
-    <!-- Font Awesome -->
+    
+    
+    
     <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    <script src="JavaScript/scriptHomePage.js"></script>
+
 
     
     

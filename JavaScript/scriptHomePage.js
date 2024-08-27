@@ -16,10 +16,18 @@ changeBackground();
 
 
 
-
 function toggleChatbot() {
-    var chatbotWindow = document.getElementById("chatbotWindow");
-    chatbotWindow.classList.toggle("hidden");
+    var chatbotContainer = document.getElementById("chatbotContainer");
+    var startButton = document.querySelector(".buttonเริ่มต้นการสนทนากับแชทบอท");
+
+    // สลับการแสดงผลของหน้าต่างแชทบอท
+    if (chatbotContainer.style.display === "none" || chatbotContainer.style.display === "") {
+        chatbotContainer.style.display = "flex"; // แสดงแชทบอท
+        startButton.style.display = "none"; // ซ่อนปุ่ม
+    } else {
+        chatbotContainer.style.display = "none"; // ซ่อนแชทบอท
+        startButton.style.display = "block"; // แสดงปุ่มอีกครั้ง
+    }
 }
 
 function sendMessage() {
@@ -27,22 +35,17 @@ function sendMessage() {
     var chatbotBody = document.getElementById("chatbotBody");
 
     if (userMessage.trim() !== "") {
-        // แสดงข้อความของผู้ใช้
         var userMessageElement = document.createElement("div");
         userMessageElement.className = "user-message";
         userMessageElement.textContent = userMessage;
         chatbotBody.appendChild(userMessageElement);
 
-        // แสดงการตอบกลับของแชทบอท
         var botMessageElement = document.createElement("div");
         botMessageElement.className = "bot-message";
-        botMessageElement.textContent = "สวัสดี";
+        botMessageElement.textContent = "สวัสดี! นี่คือตัวอย่างการตอบกลับจากแชทบอท";
         chatbotBody.appendChild(botMessageElement);
 
-        // เลื่อนการแสดงผลไปที่ข้อความล่าสุด
         chatbotBody.scrollTop = chatbotBody.scrollHeight;
-
-        // ล้างข้อความใน input
         document.getElementById("userMessage").value = "";
     }
 }
