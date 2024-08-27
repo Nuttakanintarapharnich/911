@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="css/cssAdmin.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'var(--border)',
+                        input: 'var(--input)',
+                        ring: 'var(--ring)',
+                        background: 'var(--background)',
+                        foreground: 'var(--foreground)',
+                        primary: {
+                            DEFAULT: 'var(--primary)',
+                            foreground: 'var(--primary-foreground)'
+                        },
+                        secondary: {
+                            DEFAULT: 'var(--secondary)',
+                            foreground: 'var(--secondary-foreground)'
+                        },
+                        destructive: {
+                            DEFAULT: 'var(--destructive)',
+                            foreground: 'var(--destructive-foreground)'
+                        },
+                        muted: {
+                            DEFAULT: 'var(--muted)',
+                            foreground: 'var(--muted-foreground)'
+                        },
+                        accent: {
+                            DEFAULT: 'var(--accent)',
+                            foreground: 'var(--accent-foreground)'
+                        },
+                        popover: {
+                            DEFAULT: 'var(--popover)',
+                            foreground: 'var(--popover-foreground)'
+                        },
+                        card: {
+                            DEFAULT: 'var(--background)',
+                            foreground: 'var(--card-foreground)'
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <header class="navbar flex items-center p-4 shadow-lg bg-gradient-to-r from-primary to-secondary">
+            <a href="AdminHomePage.html">
+                <img class="imgแทบบน" src="images/โลโก้ISGuideAdmin.png" alt="IS Guide Logo Admin" width="240" height="100" />
+            </a>
+            <a href="AdminHomePage.html">
+                <button class="buttonแทบบน"><i class="animation"></i>แก้ไขHome<i class="animation"></i></button>
+            </a>
+            <div class="dropdown">
+                <a href="Adminหน้าการเรียนรู้และกิจกรรม (LearningAndActivitiesPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>แก้ไขเรียนรู้และกิจกรรม<i class="animation"></i></button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="Adminหน้าข่าวสารคณะ (FacultyNewsPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขข่าวสารคณะ<i class="animation"></i></button></a>
+                    <a href="Adminหน้ากิจกรรม (ActivitiesPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขกิจกรรม<i class="animation"></i></button></a>
+                    <a href="Adminหน้าการเรียนรู้ (LearningPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขการเรียนรู้<i class="animation"></i></button></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Adminหน้าบริการนักศึกษา (StudentServicesPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>แก้ไขบริการ<i class="animation"></i></button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="แผนที่.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขแผนที่<i class="animation"></i></button></a>
+                    <a href="ห้องสมุดออนไลน์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขห้องสมุดออนไลน์<i class="animation"></i></button></a>
+                    <a href="ระบบจองหอพักนักศึกษา.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขระบบจองหอพักนักศึกษา<i class="animation"></i></button></a>
+                    <a href="ตรวจสอบค่าไฟฟ้าหอพัก.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขตรวจสอบค่าไฟฟ้าหอพัก<i class="animation"></i></button></a>
+                    <a href="ทุนการศึกษา.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขทุนการศึกษา<i class="animation"></i></button></a>
+                    <a href="REG_KKU.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขREG_KKU<i class="animation"></i></button></a>
+                    <a href="REQ_KKU.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขREQ_KKU<i class="animation"></i></button></a>
+                    <a href="ตารางสอบนักศึกษา.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขตารางสอบนักศึกษา<i class="animation"></i></button></a>
+                    <a href="กลุ่มงานบริหารคณะ.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขกลุ่มงานบริหารคณะ<i class="animation"></i></button></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Adminหน้าข้อมูลคณะวิชา (FacultyInformationPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชา<i class="animation"></i></button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="Adminสาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์<i class="animation"></i></button></a>
+                    <a href="Adminสาขานิติศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขานิติศาสตร์ <i class="animation"></i></button></a> 
+                    <a href="Adminสาขาวิชาบริหารธุรกิจ.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาบริหารธุรกิจ <i class="animation"></i></button></a>
+                    <a href="Adminสาขาวิชาวิทยาศาสตร์ประยุกต์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาวิทยาศาสตร์ประยุกต์<i class="animation"></i></button></a>
+                    <a href="Adminสาขาวิชาศิลปะและศึกษาศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาศิลปะและศึกษาศาสตร์<i class="animation"></i></button></a> 
+                    <a href="Adminสาขาวิชาสังคมศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาสังคมศาสตร์<i class="animation"></i></button></a> 
+                </div>
+            </div>
+            <a href="Adminบุคลากร.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขบุคลากร<i class="animation"></i></button></a>
+            <a href="Adminหน้าสอบถามและติดต่อ (ContactAndInquiriesPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขติดต่อ<i class="animation"></i></button> </a>
+        </header> 
+        </div>
+        </header>
+    </div>
+
+    <main class="mt-6 p-6">
+        <h2 class="text-2xl font-semibold text-muted-foreground">แก้ไขหน้า Home Page</h2>
+        <form class="mt-4 space-y-8" id="editForm">
+            <div>
+                <img src="images/IMGAdmin/รูปพื้นหลัง.png" alt="IS Guide Logo" class="w-full h-auto max-w-lg mx-auto" />
+                <label for="uploadImage" class="block text-lg text-muted-foreground mt-4">อัพโหลดรูปพื้นหลัง</label>
+                <input type="file" id="uploadImage" class="border border-border rounded-lg p-2 w-full" accept="image/*" />
+                <label for="backgroundImage" class="block text-lg text-muted-foreground mt-4">เลือกภาพพื้นหลัง</label>
+                <select id="backgroundImage" class="border border-border rounded-lg p-2 w-full">
+                    <option value="images/backg/bgIS1.jpg">bgIS1.jpg</option>
+                    <option value="images/backg/bgIS2.jpg">bgIS2.jpg</option>
+                    <option value="images/backg/bgIS85.jpg">bgIS85.jpg</option>
+                </select>
+            </div>
+    
+            <div>
+                <img src="images/IMGAdmin/ข้อความหัวเรื่อง.png" alt="IS Guide Logo" class="w-full h-auto max-w-lg mx-auto" />
+                <label for="headerText" class="block text-lg text-muted-foreground mt-4">ข้อความหัวเรื่อง</label>
+                <input type="text" id="headerText" class="border border-border rounded-lg p-2 w-full" placeholder="ยินดีต้อนรับสู่ IS Guide คณะสหวิทยาการ" />
+            </div>
+    
+            <div>
+                <img src="images/IMGAdmin/หัวเรื่องกลางเว็บ1.png" alt="IS Guide Logo" class="w-full h-auto max-w-lg mx-auto" />
+                <label for="mainHeader1" class="block text-lg text-muted-foreground mt-4">หัวเรื่องกลางเว็บ1</label>
+                <input type="text" id="mainHeader1" class="border border-border rounded-lg p-2 w-full" placeholder="แนะนำมหาวิทยาลัย" />
+                <textarea id="mainContent1" class="border border-border rounded-lg p-2 w-full mt-2" placeholder="ข้อมูลสั้นๆเกี่ยวกับประวัติศาสตร์คณะสหวิทยาการ"></textarea>
+            </div>
+    
+            <div>
+                <img src="images/IMGAdmin/หัวเรื่องกลางเว็บ2.png" alt="IS Guide Logo" class="w-full h-auto max-w-lg mx-auto" />
+                <label for="mainHeader2" class="block text-lg text-muted-foreground mt-4">หัวเรื่องกลางเว็บ2</label>
+                <input type="text" id="mainHeader2" class="border border-border rounded-lg p-2 w-full" placeholder="บริการสำหรับนักศึกษา" />
+                <textarea id="mainContent2" class="border border-border rounded-lg p-2 w-full mt-2" placeholder="Iconหอพัก, Iconร้านอาหาร, Iconบริการสุขภาพ, Iconการเดินทาง"></textarea>
+            </div>
+    
+            <div>
+                <img src="images/IMGAdmin/หัวเรื่องล่างเว็บ1.png" alt="IS Guide Logo" class="w-full h-auto max-w-lg mx-auto" />
+                <label for="footerHeader1" class="block text-lg text-muted-foreground mt-4">หัวเรื่องล่างเว็บ1</label>
+                <input type="text" id="footerHeader1" class="border border-border rounded-lg p-2 w-full" placeholder="คำแนะนำการเรียน" />
+                <textarea id="footerContent1" class="border border-border rounded-lg p-2 w-full mt-2" placeholder="ข้อมูลเกี่ยวกับคณะวิชา, หลักสูตร, ทรัพยากรการเรียนรู้"></textarea>
+            </div>
+    
+            <div>
+                <img src="images/IMGAdmin/หัวเรื่องล่างเว็บ2.png" alt="IS Guide Logo" class="w-full h-auto max-w-lg mx-auto" />
+                <label for="footerHeader2" class="block text-lg text-muted-foreground mt-4">หัวเรื่องล่างเว็บ2</label>
+                <input type="text" id="footerHeader2" class="border border-border rounded-lg p-2 w-full" placeholder="ข่าวสารและกิจกรรม" />
+                <textarea id="footerContent2" class="border border-border rounded-lg p-2 w-full mt-2" placeholder="อัปเดตข่าวสารและกิจกรรมล่าสุดสำหรับนักศึกษา"></textarea>
+            </div>
+    
+            <div>
+                <img src="images/IMGAdmin/ข้อมูลเท็กข้างล่าง.png" alt="IS Guide Logo" class="w-full h-auto max-w-lg mx-auto" />
+                <label for="contactInfo" class="block text-lg text-muted-foreground mt-4">ข้อมูล text ข้างล่าง</label>
+                <textarea id="contactInfo" class="border border-border rounded-lg p-2 w-full mt-2" placeholder="ข้อมูลติดต่อ: มหาวิทยาลัยขอนแก่น วิทยาเขตหนองคาย 112 หมู่ 7 บ้านหนองเดิ่น ตำบลหนองกอมเกาะ อำเภอเมือง จังหวัดหนองคาย 43000 | 042-415600 FAX: 042-415699 | is.inbox@kku.ac.th"></textarea>
+            </div>
+    
+            <div>
+                <img src="images/IMGAdmin/ข้อมูลลิ้งค์ข้างล่าง.png" alt="IS Guide Logo" class="w-full h-auto max-w-lg mx-auto" />
+                <label for="footerLinks" class="block text-lg text-muted-foreground mt-4">ข้อมูลลิ้งค์ข้างล่าง</label>
+                <textarea id="footerLinks" class="border border-border rounded-lg p-2 w-full mt-2" placeholder="Facebook, Twitter, Instagram, นโยบายความเป็นส่วนตัว, ข้อกำหนดการใช้งาน"></textarea>
+            </div>
+            <div class="button-borders">
+                <button class="primary-button"> บันทึกการเปลี่ยนแปลง
+                </button>
+              </div>
+    
+        </form>
+    </main>    
+</body>
+</html>

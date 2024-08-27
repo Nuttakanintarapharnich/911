@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="css/cssบุคลากร.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'var(--border)',
+                        input: 'var(--input)',
+                        ring: 'var(--ring)',
+                        background: 'var(--background)',
+                        foreground: 'var(--foreground)',
+                        primary: {
+                            DEFAULT: 'var(--primary)',
+                            foreground: 'var(--primary-foreground)'
+                        },
+                        secondary: {
+                            DEFAULT: 'var(--secondary)',
+                            foreground: 'var(--secondary-foreground)'
+                        },
+                        destructive: {
+                            DEFAULT: 'var(--destructive)',
+                            foreground: 'var(--destructive-foreground)'
+                        },
+                        muted: {
+                            DEFAULT: 'var(--muted)',
+                            foreground: 'var(--muted-foreground)'
+                        },
+                        accent: {
+                            DEFAULT: 'var(--accent)',
+                            foreground: 'var(--accent-foreground)'
+                        },
+                        popover: {
+                            DEFAULT: 'var(--popover)',
+                            foreground: 'var(--popover-foreground)'
+                        },
+                        card: {
+                            DEFAULT: 'var(--background)',
+                            foreground: 'var(--card-foreground)'
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <header class="navbar flex items-center p-4 shadow-lg bg-gradient-to-r from-primary to-secondary">
+            <a href="HomePage.html">
+            <img  class="imgแทบบน" src="images/โลโก้ISGuide.png" alt="IS Guide Logo" width="240" height="100" />
+            </a>
+
+            <a href="HomePage.html">
+                <button class="buttonแทบบน"><i class="animation"></i>Home<i class="animation"></i>
+                </button>
+            </a>
+            <div class="dropdown">
+                <a href="หน้าการเรียนรู้และกิจกรรม (LearningAndActivitiesPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>เรียนรู้และกิจกรรม<i class="animation"></i>
+                    </button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="หน้าข่าวสารคณะ (FacultyNewsPage).html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ข่าวสารคณะ<i class="animation"></i>
+                        </button></a>
+                    <a href="หน้ากิจกรรม (ActivitiesPage).html">
+                        <button class="buttonแทบบน"><i class="animation"></i>กิจกรรม<i class="animation"></i>
+                        </button></a>
+                    <a href="หน้าการเรียนรู้ (LearningPage).html">
+                        <button class="buttonแทบบน"><i class="animation"></i>การเรียนรู้<i class="animation"></i>
+                        </button></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="หน้าบริการนักศึกษา (StudentServicesPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>บริการ<i class="animation"></i>
+                    </button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="แผนที่.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>แผนที่<i class="animation"></i>
+                        </button></a>
+                    <a href="ห้องสมุดออนไลน์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ห้องสมุดออนไลน์<i class="animation"></i>
+                        </button></a>
+                    <a href="ระบบจองหอพักนักศึกษา.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ระบบจองหอพักนักศึกษา<i class="animation"></i>
+                        </button></a> 
+                    <a href="ตรวจสอบค่าไฟฟ้าหอพัก.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ตรวจสอบค่าไฟฟ้าหอพัก<i class="animation"></i>
+                        </button></a>
+                    <a href="ทุนการศึกษา.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ทุนการศึกษา<i class="animation"></i>
+                        </button></a>
+                    <a href="REG_KKU.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>REG_KKU<i class="animation"></i>
+                        </button></a>
+                    <a href="REQ_KKU.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>REQ_KKU<i class="animation"></i>
+                        </button></a>
+                    <a href="ตารางสอบนักศึกษา.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>ตารางสอบนักศึกษา<i class="animation"></i>
+                        </button></a> 
+                    <a href="กลุ่มงานบริหารคณะ.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>กลุ่มงานบริหารคณะ<i class="animation"></i>
+                        </button></a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="หน้าข้อมูลคณะวิชา (FacultyInformationPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชา<i class="animation"></i>
+                    </button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="สาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์<i class="animation"></i>
+                        </button></a>
+                    <a href="สาขานิติศาสตร์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขานิติศาสตร์ <i class="animation"></i>
+                        </button></a> 
+                    <a href="สาขาวิชาบริหารธุรกิจ.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชาบริหารธุรกิจ <i class="animation"></i>
+                        </button></a>
+                    <a href="สาขาวิชาวิทยาศาสตร์ประยุกต์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชาวิทยาศาสตร์ประยุกต์<i class="animation"></i>
+                        </button></a>
+                    <a href="สาขาวิชาศิลปะและศึกษาศาสตร์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชาศิลปะและศึกษาศาสตร์<i class="animation"></i>
+                        </button></a> 
+                    <a href="สาขาวิชาสังคมศาสตร์.html">
+                        <button class="buttonแทบบน"><i class="animation"></i>สาขาวิชาสังคมศาสตร์<i class="animation"></i>
+                        </button></a> 
+                </div>
+            </div>
+            <a href="บุคลากร.html">
+                <button class="buttonแทบบน"><i class="animation"></i>บุคลากร<i class="animation"></i>
+                </button>
+            </a>
+            <a href="หน้าสอบถามและติดต่อ (ContactAndInquiriesPage).html">
+                <button class="buttonแทบบน"><i class="animation"></i>ติดต่อ<i class="animation"></i>
+                </button>
+            </a>
+        </header> 
+    </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 bg-background">
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Kritsda Khajarern" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Chayada Surawanitkun" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Nattanin Uesin" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Natcharee Jirukkakul" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Thananchai Dasri" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Teerawat Charoenrat" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        <div class="text-center bg-card rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
+            <img class="w-32 h-32 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Assoc. Prof. Dr. Thanet Wattanakul" />
+            <h3 class="text-lg font-semibold mt-2 text-primary-foreground">ชื่อ</h3>
+            <p class="text-sm text-secondary-foreground">name</p>
+            <p class="text-xs text-muted-foreground">ตำแหน่ง</p>
+        </div>
+        </div>
+
+</body>
+</html>

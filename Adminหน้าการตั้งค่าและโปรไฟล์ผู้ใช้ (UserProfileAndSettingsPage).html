@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="css/cssAdmin.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'var(--border)',
+                        input: 'var(--input)',
+                        ring: 'var(--ring)',
+                        background: 'var(--background)',
+                        foreground: 'var(--foreground)',
+                        primary: {
+                            DEFAULT: 'var(--primary)',
+                            foreground: 'var(--primary-foreground)'
+                        },
+                        secondary: {
+                            DEFAULT: 'var(--secondary)',
+                            foreground: 'var(--secondary-foreground)'
+                        },
+                        destructive: {
+                            DEFAULT: 'var(--destructive)',
+                            foreground: 'var(--destructive-foreground)'
+                        },
+                        muted: {
+                            DEFAULT: 'var(--muted)',
+                            foreground: 'var(--muted-foreground)'
+                        },
+                        accent: {
+                            DEFAULT: 'var(--accent)',
+                            foreground: 'var(--accent-foreground)'
+                        },
+                        popover: {
+                            DEFAULT: 'var(--popover)',
+                            foreground: 'var(--popover-foreground)'
+                        },
+                        card: {
+                            DEFAULT: 'var(--background)',
+                            foreground: 'var(--card-foreground)'
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <header class="navbar flex items-center p-4 shadow-lg bg-gradient-to-r from-primary to-secondary">
+            <a href="AdminHomePage.html">
+                <img class="imgแทบบน" src="images/โลโก้ISGuideAdmin.png" alt="IS Guide Logo Admin" width="240" height="100" />
+            </a>
+            <a href="AdminHomePage.html">
+                <button class="buttonแทบบน"><i class="animation"></i>แก้ไขHome<i class="animation"></i></button>
+            </a>
+            <div class="dropdown">
+                <a href="Adminหน้าการเรียนรู้และกิจกรรม (LearningAndActivitiesPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>แก้ไขเรียนรู้และกิจกรรม<i class="animation"></i></button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="Adminหน้าข่าวสารคณะ (FacultyNewsPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขข่าวสารคณะ<i class="animation"></i></button></a>
+                    <a href="Adminหน้ากิจกรรม (ActivitiesPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขกิจกรรม<i class="animation"></i></button></a>
+                    <a href="Adminหน้าการเรียนรู้ (LearningPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขการเรียนรู้<i class="animation"></i></button></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Adminหน้าบริการนักศึกษา (StudentServicesPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>แก้ไขบริการ<i class="animation"></i></button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="แผนที่.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขแผนที่<i class="animation"></i></button></a>
+                    <a href="ห้องสมุดออนไลน์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขห้องสมุดออนไลน์<i class="animation"></i></button></a>
+                    <a href="ระบบจองหอพักนักศึกษา.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขระบบจองหอพักนักศึกษา<i class="animation"></i></button></a>
+                    <a href="ตรวจสอบค่าไฟฟ้าหอพัก.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขตรวจสอบค่าไฟฟ้าหอพัก<i class="animation"></i></button></a>
+                    <a href="ทุนการศึกษา.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขทุนการศึกษา<i class="animation"></i></button></a>
+                    <a href="REG_KKU.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขREG_KKU<i class="animation"></i></button></a>
+                    <a href="REQ_KKU.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขREQ_KKU<i class="animation"></i></button></a>
+                    <a href="ตารางสอบนักศึกษา.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขตารางสอบนักศึกษา<i class="animation"></i></button></a>
+                    <a href="กลุ่มงานบริหารคณะ.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขกลุ่มงานบริหารคณะ<i class="animation"></i></button></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Adminหน้าข้อมูลคณะวิชา (FacultyInformationPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชา<i class="animation"></i></button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="Adminสาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์<i class="animation"></i></button></a>
+                    <a href="Adminสาขานิติศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขานิติศาสตร์ <i class="animation"></i></button></a> 
+                    <a href="Adminสาขาวิชาบริหารธุรกิจ.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาบริหารธุรกิจ <i class="animation"></i></button></a>
+                    <a href="Adminสาขาวิชาวิทยาศาสตร์ประยุกต์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาวิทยาศาสตร์ประยุกต์<i class="animation"></i></button></a>
+                    <a href="Adminสาขาวิชาศิลปะและศึกษาศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาศิลปะและศึกษาศาสตร์<i class="animation"></i></button></a> 
+                    <a href="Adminสาขาวิชาสังคมศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาสังคมศาสตร์<i class="animation"></i></button></a> 
+                </div>
+            </div>
+            <a href="Adminบุคลากร.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขบุคลากร<i class="animation"></i></button></a>
+            <a href="Adminหน้าสอบถามและติดต่อ (ContactAndInquiriesPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขติดต่อ<i class="animation"></i></button> </a>
+        </header> 
+        </div>
+        </header>
+    </div>
+
+    
+</body>
+</html>

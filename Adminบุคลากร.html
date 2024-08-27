@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="css/cssAdmin.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'var(--border)',
+                        input: 'var(--input)',
+                        ring: 'var(--ring)',
+                        background: 'var(--background)',
+                        foreground: 'var(--foreground)',
+                        primary: {
+                            DEFAULT: 'var(--primary)',
+                            foreground: 'var(--primary-foreground)'
+                        },
+                        secondary: {
+                            DEFAULT: 'var(--secondary)',
+                            foreground: 'var(--secondary-foreground)'
+                        },
+                        destructive: {
+                            DEFAULT: 'var(--destructive)',
+                            foreground: 'var(--destructive-foreground)'
+                        },
+                        muted: {
+                            DEFAULT: 'var(--muted)',
+                            foreground: 'var(--muted-foreground)'
+                        },
+                        accent: {
+                            DEFAULT: 'var(--accent)',
+                            foreground: 'var(--accent-foreground)'
+                        },
+                        popover: {
+                            DEFAULT: 'var(--popover)',
+                            foreground: 'var(--popover-foreground)'
+                        },
+                        card: {
+                            DEFAULT: 'var(--background)',
+                            foreground: 'var(--card-foreground)'
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <header class="navbar flex items-center p-4 shadow-lg bg-gradient-to-r from-primary to-secondary">
+            <a href="AdminHomePage.html">
+                <img class="imgแทบบน" src="images/โลโก้ISGuideAdmin.png" alt="IS Guide Logo Admin" width="240" height="100" />
+            </a>
+            <a href="AdminHomePage.html">
+                <button class="buttonแทบบน"><i class="animation"></i>แก้ไขHome<i class="animation"></i></button>
+            </a>
+            <div class="dropdown">
+                <a href="Adminหน้าการเรียนรู้และกิจกรรม (LearningAndActivitiesPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>แก้ไขเรียนรู้และกิจกรรม<i class="animation"></i></button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="Adminหน้าข่าวสารคณะ (FacultyNewsPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขข่าวสารคณะ<i class="animation"></i></button></a>
+                    <a href="Adminหน้ากิจกรรม (ActivitiesPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขกิจกรรม<i class="animation"></i></button></a>
+                    <a href="Adminหน้าการเรียนรู้ (LearningPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขการเรียนรู้<i class="animation"></i></button></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Adminหน้าบริการนักศึกษา (StudentServicesPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>แก้ไขบริการ<i class="animation"></i></button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="แผนที่.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขแผนที่<i class="animation"></i></button></a>
+                    <a href="ห้องสมุดออนไลน์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขห้องสมุดออนไลน์<i class="animation"></i></button></a>
+                    <a href="ระบบจองหอพักนักศึกษา.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขระบบจองหอพักนักศึกษา<i class="animation"></i></button></a>
+                    <a href="ตรวจสอบค่าไฟฟ้าหอพัก.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขตรวจสอบค่าไฟฟ้าหอพัก<i class="animation"></i></button></a>
+                    <a href="ทุนการศึกษา.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขทุนการศึกษา<i class="animation"></i></button></a>
+                    <a href="REG_KKU.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขREG_KKU<i class="animation"></i></button></a>
+                    <a href="REQ_KKU.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขREQ_KKU<i class="animation"></i></button></a>
+                    <a href="ตารางสอบนักศึกษา.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขตารางสอบนักศึกษา<i class="animation"></i></button></a>
+                    <a href="กลุ่มงานบริหารคณะ.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขกลุ่มงานบริหารคณะ<i class="animation"></i></button></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Adminหน้าข้อมูลคณะวิชา (FacultyInformationPage).html">
+                    <button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชา<i class="animation"></i></button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="Adminสาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาเทคโนโลยีและวิศวกรรมศาสตร์<i class="animation"></i></button></a>
+                    <a href="Adminสาขานิติศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขานิติศาสตร์ <i class="animation"></i></button></a> 
+                    <a href="Adminสาขาวิชาบริหารธุรกิจ.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาบริหารธุรกิจ <i class="animation"></i></button></a>
+                    <a href="Adminสาขาวิชาวิทยาศาสตร์ประยุกต์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาวิทยาศาสตร์ประยุกต์<i class="animation"></i></button></a>
+                    <a href="Adminสาขาวิชาศิลปะและศึกษาศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาศิลปะและศึกษาศาสตร์<i class="animation"></i></button></a> 
+                    <a href="Adminสาขาวิชาสังคมศาสตร์.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขสาขาวิชาสังคมศาสตร์<i class="animation"></i></button></a> 
+                </div>
+            </div>
+            <a href="Adminบุคลากร.html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขบุคลากร<i class="animation"></i></button></a>
+            <a href="Adminหน้าสอบถามและติดต่อ (ContactAndInquiriesPage).html"><button class="buttonแทบบน"><i class="animation"></i>แก้ไขติดต่อ<i class="animation"></i></button> </a>
+        </header> 
+        </div>
+        </header>
+    </div>
+</script>
+            <style type="text/tailwindcss">
+                @layer base {
+                    :root {
+                        --background: 0 0% 100%;
+            --foreground: 240 10% 3.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 240 10% 3.9%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 240 10% 3.9%;
+            --primary: 240 5.9% 10%;
+            --primary-foreground: 0 0% 98%;
+            --secondary: 240 4.8% 95.9%;
+            --secondary-foreground: 240 5.9% 10%;
+            --muted: 240 4.8% 95.9%;
+            --muted-foreground: 240 3.8% 46.1%;
+            --accent: 240 4.8% 95.9%;
+            --accent-foreground: 240 5.9% 10%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 240 5.9% 90%;
+            --input: 240 5.9% 90%;
+            --ring: 240 5.9% 10%;
+            --radius: 0.5rem;
+                    }
+                    .dark {
+                        --background: 240 10% 3.9%;
+            --foreground: 0 0% 98%;
+            --card: 240 10% 3.9%;
+            --card-foreground: 0 0% 98%;
+            --popover: 240 10% 3.9%;
+            --popover-foreground: 0 0% 98%;
+            --primary: 0 0% 98%;
+            --primary-foreground: 240 5.9% 10%;
+            --secondary: 240 3.7% 15.9%;
+            --secondary-foreground: 0 0% 98%;
+            --muted: 240 3.7% 15.9%;
+            --muted-foreground: 240 5% 64.9%;
+            --accent: 240 3.7% 15.9%;
+            --accent-foreground: 0 0% 98%;
+            --destructive: 0 62.8% 30.6%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 240 3.7% 15.9%;
+            --input: 240 3.7% 15.9%;
+            --ring: 240 4.9% 83.9%;
+                    }
+                }
+            </style>
+            </head>
+            <body>
+
+
+            <div class="overflow-x-auto p-6 bg-background">
+            <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold text-primary-foreground">แก้ไขบุคลากร</h2>
+
+            <div class="button-borders">
+                <button class="primary-button"> Add Personnel
+                </button>
+              </div>
+            </div>
+            <table class="min-w-full bg-card rounded-lg shadow-lg">
+            <thead>
+            <tr class="bg-secondary text-secondary-foreground">
+            <th class="py-2 px-4">Image</th>
+            <th class="py-2 px-4">Name (Thai)</th>
+            <th class="py-2 px-4">Name (English)</th>
+            <th class="py-2 px-4">Title</th>
+            <th class="py-2 px-4">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="border-b border-border hover:bg-muted">
+            <td class="py-2 px-4 text-center">
+            <img class="w-16 h-16 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+            </td>
+            <td class="py-2 px-4 text-primary-foreground">ชื่อ</td>
+            <td class="py-2 px-4 text-secondary-foreground">name</td>
+            <td class="py-2 px-4 text-muted-foreground">ตำแหน่ง</td>
+            <td class="py-2 px-4 flex space-x-2">
+            
+            <button class="BtnEdit">Edit 
+                <svg class="svgEdit" viewBox="0 0 512 512">
+                    <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg>
+                </button>
+
+
+
+            <button class="buttonDelete">
+            <svg viewBox="0 0 448 512" class="svgIconDelete"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+            </button>
+            </td>
+            </tr>
+            <tr class="border-b border-border hover:bg-muted">
+                <td class="py-2 px-4 text-center">
+                <img class="w-16 h-16 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+                </td>
+                <td class="py-2 px-4 text-primary-foreground">ชื่อ</td>
+                <td class="py-2 px-4 text-secondary-foreground">name</td>
+                <td class="py-2 px-4 text-muted-foreground">ตำแหน่ง</td>
+                <td class="py-2 px-4 flex space-x-2">
+                
+            <button class="BtnEdit">Edit 
+                <svg class="svgEdit" viewBox="0 0 512 512">
+                    <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg>
+                </button>
+
+
+
+
+            <button class="buttonDelete">
+            <svg viewBox="0 0 448 512" class="svgIconDelete"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+            </button>
+                </td>
+                </tr>
+            <tr class="border-b border-border hover:bg-muted">
+            <td class="py-2 px-4 text-center">
+            <img class="w-16 h-16 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+            </td>
+            <td class="py-2 px-4 text-primary-foreground">ชื่อ</td>
+            <td class="py-2 px-4 text-secondary-foreground">name</td>
+            <td class="py-2 px-4 text-muted-foreground">ตำแหน่ง</td>
+            <td class="py-2 px-4 flex space-x-2">
+            
+            <button class="BtnEdit">Edit 
+                <svg class="svgEdit" viewBox="0 0 512 512">
+                    <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg>
+                </button>
+
+
+
+            <button class="buttonDelete">
+            <svg viewBox="0 0 448 512" class="svgIconDelete"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+            </button>
+            </td>
+            </tr>
+            <tr class="border-b border-border hover:bg-muted">
+            <td class="py-2 px-4 text-center">
+            <img class="w-16 h-16 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+            </td>
+            <td class="py-2 px-4 text-primary-foreground">ชื่อ</td>
+            <td class="py-2 px-4 text-secondary-foreground">name</td>
+            <td class="py-2 px-4 text-muted-foreground">ตำแหน่ง</td>
+            <td class="py-2 px-4 flex space-x-2">
+            
+            <button class="BtnEdit">Edit 
+                <svg class="svgEdit" viewBox="0 0 512 512">
+                    <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg>
+                </button>
+
+
+
+            <button class="buttonDelete">
+            <svg viewBox="0 0 448 512" class="svgIconDelete"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+            </button>
+            </td>
+            </tr>
+            <tr class="border-b border-border hover:bg-muted">
+            <td class="py-2 px-4 text-center">
+            <img class="w-16 h-16 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+            </td>
+            <td class="py-2 px-4 text-primary-foreground">ชื่อ</td>
+            <td class="py-2 px-4 text-secondary-foreground">name</td>
+            <td class="py-2 px-4 text-muted-foreground">ตำแหน่ง</td>
+            <td class="py-2 px-4 flex space-x-2">
+            
+            <button class="BtnEdit">Edit 
+                <svg class="svgEdit" viewBox="0 0 512 512">
+                    <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg>
+                </button>
+
+
+
+            <button class="buttonDelete">
+            <svg viewBox="0 0 448 512" class="svgIconDelete"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+            </button>
+            </td>
+            </tr>
+            <tr class="border-b border-border hover:bg-muted">
+            <td class="py-2 px-4 text-center">
+            <img class="w-16 h-16 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+            </td>
+            <td class="py-2 px-4 text-primary-foreground">ชื่อ</td>
+            <td class="py-2 px-4 text-secondary-foreground">name</td>
+            <td class="py-2 px-4 text-muted-foreground">ตำแหน่ง</td>
+            <td class="py-2 px-4 flex space-x-2">
+            
+            <button class="BtnEdit">Edit 
+                <svg class="svgEdit" viewBox="0 0 512 512">
+                    <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg>
+                </button>
+
+
+
+            <button class="buttonDelete">
+            <svg viewBox="0 0 448 512" class="svgIconDelete"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+            </button>
+            </td>
+            </tr>
+            <tr class="border-b border-border hover:bg-muted">
+            <td class="py-2 px-4 text-center">
+            <img class="w-16 h-16 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+            </td>
+            <td class="py-2 px-4 text-primary-foreground">ชื่อ</td>
+            <td class="py-2 px-4 text-secondary-foreground">name</td>
+            <td class="py-2 px-4 text-muted-foreground">ตำแหน่ง</td>
+            <td class="py-2 px-4 flex space-x-2">
+            
+            <button class="BtnEdit">Edit 
+                <svg class="svgEdit" viewBox="0 0 512 512">
+                    <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg>
+                </button>
+
+
+
+            <button class="buttonDelete">
+            <svg viewBox="0 0 448 512" class="svgIconDelete"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+            </button>
+            </td>
+            </tr>
+            <tr class="border-b border-border hover:bg-muted">
+            <td class="py-2 px-4 text-center">
+            <img class="w-16 h-16 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+            </td>
+            <td class="py-2 px-4 text-primary-foreground">ชื่อ</td>
+            <td class="py-2 px-4 text-secondary-foreground">name</td>
+            <td class="py-2 px-4 text-muted-foreground">ตำแหน่ง</td>
+            <td class="py-2 px-4 flex space-x-2">
+            
+            <button class="BtnEdit">Edit 
+                <svg class="svgEdit" viewBox="0 0 512 512">
+                    <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg>
+                </button>
+
+
+
+            <button class="buttonDelete">
+            <svg viewBox="0 0 448 512" class="svgIconDelete"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+            </button>
+            </td>
+            </tr>
+            <tr class="border-b border-border hover:bg-muted">
+            <td class="py-2 px-4 text-center">
+            <img class="w-16 h-16 rounded-full mx-auto border-4 border-primary" src="images/โลโก้ISGuide.png" alt="Prof. Dr. Wirat Jiywam" />
+            </td>
+            <td class="py-2 px-4 text-primary-foreground">ชื่อ</td>
+            <td class="py-2 px-4 text-secondary-foreground">name</td>
+            <td class="py-2 px-4 text-muted-foreground">ตำแหน่ง</td>
+            <td class="py-2 px-4 flex space-x-2">
+            
+            <button class="BtnEdit">Edit 
+                <svg class="svgEdit" viewBox="0 0 512 512">
+                    <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg>
+                </button>
+
+
+
+            <button class="buttonDelete">
+            <svg viewBox="0 0 448 512" class="svgIconDelete"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+            </button>
+            </td>
+            </tr>
+    </tbody>
+    </table>
+    </div>
+</body>
+</html>
